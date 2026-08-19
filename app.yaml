@@ -1,0 +1,10 @@
+env:
+  SGLANG_MODEL:
+    required: true
+  SGLANG_MODEL_NAME:
+    required: true
+database: false
+# No persistent_storage: zorc-agent doesn't support it yet (Coolify does --
+# see hermes-agent-wrapper). Model weights re-download from HF on any future
+# redeploy; acceptable since zorc-agent deploys are create-only today, so
+# that's a rare event, not a routine one.
